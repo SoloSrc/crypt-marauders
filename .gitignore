@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Kay Kits
+res/kaykit-adventurers/**/*.png
+res/kaykit-adventurers/**/*.gltf
+res/kaykit-adventurers/**/*.glb
+res/kaykit-adventurers/**/*.bin
