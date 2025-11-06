@@ -7,3 +7,8 @@ res/kaykit-adventurers/**/*.png
 res/kaykit-adventurers/**/*.gltf
 res/kaykit-adventurers/**/*.glb
 res/kaykit-adventurers/**/*.bin
+
+res/kaykit-skeletons/**/*.png
+res/kaykit-skeletons/**/*.gltf
+res/kaykit-skeletons/**/*.glb
+res/kaykit-skeletons/**/*.bin
