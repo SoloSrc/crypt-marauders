@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ohto8f6s6xe7"]
+
+[ext_resource type="PackedScene" uid="uid://cbplq01ej2dcw" path="res://res/kaykit-skeletons/characters/gltf/Skeleton_Minion.glb" id="1_4yrxu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y11k3"]
+height = 2.2
+
+[node name="Minion" type="CharacterBody3D"]
+
+[node name="Graphics" parent="." instance=ExtResource("1_4yrxu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("CapsuleShape3D_y11k3")
+
+[editable path="Graphics"]
