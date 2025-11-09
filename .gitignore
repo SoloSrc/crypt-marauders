@@ -12,3 +12,8 @@ res/kaykit-skeletons/**/*.png
 res/kaykit-skeletons/**/*.gltf
 res/kaykit-skeletons/**/*.glb
 res/kaykit-skeletons/**/*.bin
+
+res/kaykit-dungeon-remastered/**/*.png
+res/kaykit-dungeon-remastered/**/*.gltf
+res/kaykit-dungeon-remastered/**/*.glb
+res/kaykit-dungeon-remastered/**/*.bin
