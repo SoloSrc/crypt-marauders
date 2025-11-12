@@ -17,3 +17,8 @@ res/kaykit-dungeon-remastered/**/*.png
 res/kaykit-dungeon-remastered/**/*.gltf
 res/kaykit-dungeon-remastered/**/*.glb
 res/kaykit-dungeon-remastered/**/*.bin
+
+res/kaykit-character-animations/**/*.png
+res/kaykit-character-animations/**/*.gltf
+res/kaykit-character-animations/**/*.glb
+res/kaykit-character-animations/**/*.bin
