@@ -1,6 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ohto8f6s6xe7"]
+[gd_scene load_steps=10 format=3 uid="uid://ohto8f6s6xe7"]
 
 [ext_resource type="PackedScene" uid="uid://cbplq01ej2dcw" path="res://res/kaykit-skeletons/characters/gltf/Skeleton_Minion.glb" id="1_4yrxu"]
+[ext_resource type="AnimationLibrary" uid="uid://dfb4c23hpf2x8" path="res://res/kaykit-character-animations/Animations/advanced-movement.tres" id="2_nmu0d"]
+[ext_resource type="AnimationLibrary" uid="uid://cgepwukl04yh" path="res://res/kaykit-character-animations/Animations/basic-movement.tres" id="3_iuupi"]
+[ext_resource type="AnimationLibrary" uid="uid://5c38xogq5hc7" path="res://res/kaykit-character-animations/Animations/general.tres" id="4_emy2s"]
+[ext_resource type="AnimationLibrary" uid="uid://xugbk3i8ff4e" path="res://res/kaykit-character-animations/Animations/melee-combat.tres" id="5_r3yfr"]
+[ext_resource type="AnimationLibrary" uid="uid://bcotlgn30h0dh" path="res://res/kaykit-character-animations/Animations/ranged-combat.tres" id="6_smq6m"]
+[ext_resource type="AnimationLibrary" uid="uid://db0220h3cltss" path="res://res/kaykit-character-animations/Animations/simulation.tres" id="7_yek48"]
+[ext_resource type="AnimationLibrary" uid="uid://cp05w22k7fobp" path="res://res/kaykit-character-animations/Animations/special.tres" id="8_cohrf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y11k3"]
 height = 2.2
@@ -8,6 +15,50 @@ height = 2.2
 [node name="Minion" type="CharacterBody3D"]
 
 [node name="Graphics" parent="." instance=ExtResource("1_4yrxu")]
+
+[node name="Skeleton3D" parent="Graphics/Rig_Medium" index="0"]
+bones/1/position = Vector3(0, 0.39206383, 0)
+bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
+bones/2/position = Vector3(-0.17094508, 0.11358732, 1.557549e-08)
+bones/2/rotation = Quaternion(0.99732214, -0.029457362, 0.031529266, 0.059048314)
+bones/3/rotation = Quaternion(0.2740081, -6.3812955e-08, 1.927607e-07, 0.9617275)
+bones/4/rotation = Quaternion(-0.5590394, 0.11451276, -0.008627633, 0.82115)
+bones/5/rotation = Quaternion(-8.934892e-05, 0.9202217, -0.3913977, 2.0290998e-05)
+bones/6/position = Vector3(0.17094508, 0.1135872, 1.5994095e-08)
+bones/6/rotation = Quaternion(0.99618554, 0.047913633, 0.056642693, -0.045938957)
+bones/7/rotation = Quaternion(0.16501394, 6.49408e-08, -1.1140695e-07, 0.9862913)
+bones/8/rotation = Quaternion(-0.53372866, -0.26089525, -1.7298482e-05, 0.80440503)
+bones/9/rotation = Quaternion(0.00026347244, 0.9202156, -0.39141193, -5.963906e-05)
+bones/10/rotation = Quaternion(-6.938893e-18, 7.1054274e-15, 4.93038e-32, 1)
+bones/11/rotation = Quaternion(8.271806e-25, 3.7252903e-09, -2.75506e-40, 1)
+bones/12/rotation = Quaternion(-5.8060785e-11, -0.031341746, -1.880125e-09, 0.99950874)
+bones/13/position = Vector3(0.21200736, 0.13413203, 7.9299625e-08)
+bones/13/rotation = Quaternion(-0.5599063, -0.060880356, -0.6439745, 0.5177794)
+bones/14/rotation = Quaternion(3.7650654e-08, -5.1384802e-08, -0.4947193, 0.8690529)
+bones/15/rotation = Quaternion(7.250843e-09, 9.200791e-09, 0.026658095, 0.99964464)
+bones/15/scale = Vector3(0.99999994, 1, 1.0000001)
+bones/16/rotation = Quaternion(-0.32106528, -0.32531866, 0.1457259, 0.8774103)
+bones/17/position = Vector3(-6.936717e-09, 0.096125185, -0.057500005)
+bones/17/rotation = Quaternion(6.9489685e-09, -3.587743e-09, -0.7071068, 0.7071067)
+bones/18/position = Vector3(-0.21200737, 0.13413203, 8.6813984e-08)
+bones/18/rotation = Quaternion(-0.6182439, 0.08072865, 0.61801153, 0.47887278)
+bones/19/rotation = Quaternion(2.1687793e-08, 6.223694e-08, 0.5179393, 0.8554175)
+bones/20/rotation = Quaternion(7.300499e-09, -7.3388096e-09, -0.0266581, 0.99964464)
+bones/20/scale = Vector3(1.0000001, 1, 1)
+bones/21/rotation = Quaternion(-0.31929126, 0.30052418, -0.22734971, 0.8695116)
+bones/22/position = Vector3(-1.541501e-08, 0.096125126, -0.057499975)
+bones/22/rotation = Quaternion(-9.53579e-10, -4.3147743e-09, 0.7071068, 0.7071067)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Graphics"]
+libraries = {
+&"advanced-movement": ExtResource("2_nmu0d"),
+&"basic-movement": ExtResource("3_iuupi"),
+&"general": ExtResource("4_emy2s"),
+&"melee-combat": ExtResource("5_r3yfr"),
+&"ranged-combat": ExtResource("6_smq6m"),
+&"simulation": ExtResource("7_yek48"),
+&"special": ExtResource("8_cohrf")
+}
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
