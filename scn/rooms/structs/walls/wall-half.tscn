@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0gjvww5nfete"]
+
+[ext_resource type="PackedScene" uid="uid://y7hktiaokgys" path="res://res/kaykit-dungeon-remastered/Assets/gltf/wall_half.gltf" id="1_vrimr"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cipq8"]
+points = PackedVector3Array(-1.6292068e-07, 0, -0.50000066, 1.9998046, 0, -0.50000066, -1.6292068e-07, 0, 0.4999022, -1.6292068e-07, 4, -0.50000066, 2.0000002, 0, 0.4999022, 1.9998046, 4, -0.50000066, -1.6292068e-07, 4, 0.4999022, 2.0000002, 4, 0.4999022)
+
+[node name="WallHalf" type="StaticBody3D"]
+
+[node name="wall_half2" parent="." instance=ExtResource("1_vrimr")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_cipq8")
+
+[editable path="wall_half2"]

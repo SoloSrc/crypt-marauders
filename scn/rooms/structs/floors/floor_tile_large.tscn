@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bglc41nlbyhwf"]
+
+[ext_resource type="PackedScene" uid="uid://benc4oeelcn8f" path="res://res/kaykit-dungeon-remastered/Assets/gltf/floor_tile_large.gltf" id="1_o0coe"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o0coe"]
+points = PackedVector3Array(-2, -0.10000001, -2, -2, -0.10000001, 2, -2, 0.049985334, -2, 2, -0.10000001, -2, -2, 0.049985334, 2, 2, -0.10000001, 2, 0, 0.050000012, 0, 2, 0.049985334, -2, 2, 0.049985334, 2)
+
+[node name="FloorTileLarge" type="StaticBody3D"]
+
+[node name="floor_tile_large2" parent="." instance=ExtResource("1_o0coe")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_o0coe")
+
+[editable path="floor_tile_large2"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bob3iw33ot31o"]
+
+[ext_resource type="PackedScene" uid="uid://d4ko6b3e7kqyy" path="res://res/kaykit-dungeon-remastered/Assets/gltf/wall_corner.gltf" id="1_ikxll"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eqlj3"]
+points = PackedVector3Array(-0.50014687, 3.4498825, 2.000061, -0.250049, 3.1996868, 2.000061, 0.5, 4, 1.9998162, -0.50014687, 4, 1.9998162, -2, 4, 0.4999265, -0.50014687, 0, 2.000061, -0.250049, 0.5, 2.000061, 0.5, 4, -3.6746264e-05, 0.5, 0, 1.9998162, -2, 4, -0.5, -2, 0, 0.4999265, -0.00019574165, 4, -0.5, 0.5, 0, -3.6746264e-05, -2, 0, -0.5, -0.00019574165, 0, -0.5)
+
+[node name="WallCorner" type="StaticBody3D"]
+
+[node name="wall_corner2" parent="." instance=ExtResource("1_ikxll")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_eqlj3")
+
+[editable path="wall_corner2"]
